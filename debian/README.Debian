@@ -1,0 +1,11 @@
+otf2bdf for Debian
+------------------
+
+According to upstream author:
+
+Please note that aside from bug fixes, this is intended to be the last
+or next to last major release of this program. There just aren't that
+many applications that need bitmap fonts any more because the outline
+font rasterizers are getting much better.
+
+ -- Miriam Ruiz <little_miry@yahoo.es>  Mon, 09 Jun 2008 07:51:22 +0000

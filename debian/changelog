@@ -1,0 +1,58 @@
+otf2bdf (3.1-4.1) unstable; urgency=medium
+
+  * Non-maintainer upload
+  * Detect freetype2 via pkg-config, modernize package (Closes: #892336)
+
+ -- Hilko Bengen <bengen@debian.org>  Fri, 26 Oct 2018 22:55:05 +0200
+
+otf2bdf (3.1-4) unstable; urgency=medium
+
+  * Upgraded Standards-Version from 3.9.3 to 4.1.1
+  * Added debian/patches/args.patch. Closes: #716321
+  * Added debian/patches/mkinstalldirs.patch
+
+ -- Miriam Ruiz <miriam@debian.org>  Tue, 24 Oct 2017 10:40:21 +0200
+
+otf2bdf (3.1-3) unstable; urgency=low
+
+  * Upgraded Standards-Version from 3.9.1 to 3.9.3
+  * Upgraded debian/compat to 9
+  * Added build-arch and build-indep targets to debian/rules
+  * Modified debian/rules to use fortified libc functions
+    See: http://wiki.debian.org/Hardening
+  * Changed my email address in debian/control to miriam@debian.org
+  * Updated Homepage in debian/control
+
+ -- Miriam Ruiz <miriam@debian.org>  Fri, 30 Nov 2012 14:19:48 +0100
+
+otf2bdf (3.1-2) unstable; urgency=low
+
+  * Upgraded Standards-Version from 3.7.3 to 3.9.1
+  * Moved to dpkg source v3
+
+ -- Miriam Ruiz <little_miry@yahoo.es>  Sat, 30 Oct 2010 00:56:55 +0200
+
+otf2bdf (3.1-1) unstable; urgency=low
+
+  * New upstream release (Closes: #482495)
+    - Fixes for Freetype includes.
+    - Fixed some sign promotion problems that came up with gcc 4.2.3.
+    - Fixed a glyph bitmap undergeneration problem that occurs with some
+      TTF fonts.
+  * Removed bashism in debian/rules (Closes: #484428)
+  * Upgraded Standards-Version to 3.7.3
+  * Added Homepage tag to debian/control
+  * Removed quilt from Build-Depends
+  * Removed old patches (Closes: #485353)
+  * Fixed debian/watch file (Closes: #453590)
+  * Added -Wl,--as-needed to LDFLAGS
+  * Fixed debian/rules so that build fails if make distclean fails
+
+ -- Miriam Ruiz <little_miry@yahoo.es>  Mon, 09 Jun 2008 07:51:22 +0000
+
+otf2bdf (3.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #404069)
+
+ -- Miriam Ruiz <little_miry@yahoo.es>  Wed, 20 Dec 2006 22:45:02 +0000
+

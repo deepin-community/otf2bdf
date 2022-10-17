@@ -1,0 +1,9 @@
+# Watch control file for uscan
+# See uscan(1) for format
+
+# Compulsory line, this is a version 3 file
+version=3
+
+# Examine a Webpage 
+# <Webpage URL> <string match>
+http://www.math.nmsu.edu/~mleisher/Software/otf2bdf/ otf2bdf-(.*)\.tgz

@@ -1,0 +1,26 @@
+Index: otf2bdf/configure.in
+===================================================================
+--- otf2bdf.orig/configure.in
++++ otf2bdf/configure.in
+@@ -3,12 +3,16 @@ dnl Process this file with autoconf to p
+ AC_INIT(otf2bdf.c)
+ 
+ AC_PROG_CC
++PKG_PROG_PKG_CONFIG
+ 
+-OLDLIBS=$LIBS
+-LIBS="$LIBS `freetype-config --libs`"
+-CPPFLAGS="$CPPFLAGS `freetype-config --cflags`"
+-AC_CHECK_LIB(freetype, FT_Init_FreeType, LIBS="$LIBS -lfreetype",[
+-             AC_MSG_ERROR([Can't find Freetype library! Compile FreeType first.])])
++PKG_CHECK_MODULES(
++	[FREETYPE],
++	[freetype2],
++	[
++		CFLAGS="$CFLAGS $FREETYPE_CFLAGS"
++		LIBS="$LIBS $FREETYPE_LIBS"
++	],
++	[AC_MSG_ERROR([Can't find Freetype library])])
+ AC_SUBST(LIBS)
+ 
+ dnl get Compiler flags right.
